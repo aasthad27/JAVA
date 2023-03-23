@@ -189,6 +189,135 @@ classname objname = new classname();
 
 
 
+### CONSTRUCTORS IN JAVA
+
+1)object initialisation 
+2)every java class hve constructor-->default 
+3)constructor automticlly called at the time of object creation
+4) no return type
+
+
+## Default Constructor 
+
+```
+import java.io.*;
+
+class Geeks {
+	Geeks() { super(); }
+	public static void main(String[] args)
+	{
+		Geeks geek = new Geeks();
+	}
+}
+```
+The first line of a constructor is a call to super() or this(), (a call to a constructor of a super-class or an overloaded constructor), if you don’t type in the call to super in your constructor the compiler will provide you with a non-argument call to super at the first line of your code, the super constructor must be called to create an object
+
+## Parameterised Constructor
+
+```
+import java.io.*;
+class Geek {
+	// data members of the class.
+	String name;
+	int id;
+	Geek(String name, int id)
+	{
+		this.name = name;
+		this.id = id;
+	}
+}
+class GFG {
+	public static void main(String[] args)
+	{
+		// This would invoke the parameterized constructor.
+		Geek geek1 = new Geek("avinash", 68);
+		System.out.println("GeekName :" + geek1.name + " and GeekId :" + geek1.id);
+	}
+}
+
+```
+
+
+## COPY COnstructor 
+
+```
+Class A
+{
+  int a;
+  String b;
+  A()
+  {
+    a=ref.a;
+    b=ref.b;
+  }
+  A(A ref)
+  {
+    a=ref.a;
+    b=ref.b;
+   }
+}
+Class B
+{
+  public static void main(String[] args){
+     A r=new A();
+     A r2=new A(r);
+  }
+  
+}
+```
+
+###### Main purpose of copy constructor is to copy the values of one object into another , by passing the reference of object
+
+### Constructor Chaining In Java with Examples
+
+
+Constructor chaining is the process of calling one constructor from another constructor with respect to current object. 
+
+Constructor chaining can be done in two ways: 
+ 
+
+Within same class: It can be done using this() keyword for constructors in the same class
+From base class: by using super() keyword to call the constructor from the base class.
+```
+// Java program to illustrate Constructor Chaining
+// within same class Using this() keyword
+class Temp
+{
+	// default constructor 1
+	// default constructor will call another constructor
+	// using this keyword from same class
+	Temp()
+	{
+		// calls constructor 2
+		this(5);
+		System.out.println("The Default constructor");
+	}
+
+	// parameterized constructor 2
+	Temp(int x)
+	{
+		// calls constructor 3
+		this(5, 15);
+		System.out.println(x);
+	}
+
+	// parameterized constructor 3
+	Temp(int x, int y)
+	{
+		System.out.println(x * y);
+	}
+
+	public static void main(String args[])
+	{
+		// invokes default constructor first
+		new Temp();
+	}
+}
+```
+
+#### What happens if we change the order of constructors?
+Nothing, Constructor chaining can be achieved in any order
+
 
 
 
