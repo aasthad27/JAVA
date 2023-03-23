@@ -601,7 +601,50 @@ Geeks
 4) abstract class have to be superclass , if we are accessing the super class through sub class then why abstract is required ?
    Let's figure this out 
    
-
+5) if a class contain partial implementation then we should declare a class as abstract .
+ 
+ ```
+   abstract class A
+   {
+      public void m();  // no such implementation so we made it abstract no need of creation of object
+   } 
+  ```
+  
+  
+ 6) if class method contains abstract then also we have to make that whole class abstract .
+   abstract .
+   
+   ```
+    abstract class A
+    {
+      abstract void m();
+      
+    }
+   ```
+   
+   So here we go => why abstract classes are required , 
+   let's take an example , suppose we are makiing a superclass animal and we are making two sub classes dog and tiger we are defining a function called eat both will      eat differently hence implementation will be different , so we define eat as abstract in the super class and if we are difining method s abstrat then we have to         make the class as abstract too , we don't need to create an object for the superclass , we can create the object for the subclass directly and access it . 
+   
+   ```
+   abstract class animal
+   {
+    public abstrat void eat ();
+   }
+   class dog extends animal 
+   {
+   void eat()
+   {
+   
+   }
+   }
+   class tiger extends animal
+   {
+   void eat{
+   }
+   }
+   
+   ```
+   
 
 
 
