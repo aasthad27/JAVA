@@ -161,6 +161,32 @@ java classname
 
 ### CLASS AND OBJECT IN JAVA
 
+class
+```
+class Student {
+	int id; // data member (also instance variable)
+	String name; // data member (also instance variable)
+
+	public static void main(String args[])
+	{
+		Student s1 = new Student(); // creating an object of
+									// Student
+		System.out.println(s1.id);
+		System.out.println(s1.name);
+	}
+}
+```
+
+Creation of object
+
+classname objname = new classname();
+
+            |        |      |
+            |        |      |
+     obj reference   Dynamic  Constructor
+                     memory 
+                     alloction
+
 
 
 
