@@ -1,10 +1,10 @@
 # JAVA
 LEARN JAVA WITH ME
 
-#BASIC STUFF 
+# BASIC STUFF 
 
 
-##DATATYPES IN JAVA
+## DATATYPES IN JAVA
 
 1)PRIMITIVE:
 
@@ -68,7 +68,7 @@ int[] marks ={97,98,95};
 int[][] finalMarks ={{97,98,95},{95,95,98}};
 
 
-###CASTING IN JAVA
+### CASTING IN JAVA
 
 1)IMPLICIT (small --> into large )
 
@@ -89,8 +89,8 @@ output=>throw error , we have to explicitly convert the double value to int
 int fp =p+(int)18.88;
 
 output=>118
-
-####CONSTANT :
+ 
+#### CONSTANT :
 
 final float PI =3.14F; // cannot reassign furthur 
 
@@ -106,14 +106,14 @@ int age =sc.nextInt();
 
 System.out.println(age);
 
-###STRING INPUT 
+### STRING INPUT 
 
 String name =sc.next();  // takes token 
 
 String name=sc.nextLine();  // takes whole sentence 
 
 
-#IMP STUFF
+# IMP STUFF
 
 JDK VS JRE VS JVM
 
@@ -126,7 +126,40 @@ https://www.javatpoint.com/features-of-java
 
 Syntax of java
 
+class class name
+{
+   public static void main(String args[])
+     {
+        System.out.println("LET"S LEARN JAVA ");
+     }
+     
+}
+   
 
+MAIN FUNCTION => JVM ENTERS FROM MAIN FUNCTION ,hence it needs to be public
+
+##### STATIC: AS members of class deals with the object hence we need to make it static in so that we don't have to create an object of the main function
+
+Return type=>void 
+
+Argument is passed as String
+
+
+##### SAVING 
+
+classname.java
+
+
+##### COMPILATION
+
+javac classname.java  =>dot class file is generated
+
+##### EXECUTION
+
+java classname
+
+
+### CLASS AND OBJECT IN JAVA
 
 
 
