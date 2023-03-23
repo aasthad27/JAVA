@@ -575,11 +575,32 @@ for
 Geeks
 ```
 
+### ABSTRACT CLASS 
 
+->declaration abstract 
 
+1) we can't create object for the abstract class though we can create reference 
+2) super class have the capability to store the object of the sub class 
+  abstract class animal
+  {
+  
+  }
+  class Dog extends animal
+  {
+  
+  }
+  class demo
+  {
+     public static void main(String[] args){
+       animal r=new animal(); // error will be thrown as we can't create object of abstract class 
+       animal r=new Dog();
+       }
+   }
 
-
-
+3) it may or may not contain abstract methods.
+4) abstract class have to be superclass , if we are accessing the super class through sub class then why abstract is required ?
+   Let's figure this out 
+   
 
 
 
