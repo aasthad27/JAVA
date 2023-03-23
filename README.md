@@ -645,7 +645,71 @@ Geeks
    
    ```
    
+   ##### Hence whenever the action is common but implementation is different then we should use abstract method .
+ 
+ 
+   ```
+   abstract class programming
+   {
+     public abstract founder();
+   }
+   class HTML extends programming
+   {
+       @Override
+       public void founder()
+       {
+       System.out.println("Tim berners Lee");
+       }
+   }
+   class Java extends programming
+   {
+     @Override
+     public void founder()
+     {
+     System.out.println("  ");
+     }
+   }
+   class main()
+   {
+     public static void main(string[] args)
+     {
+       HTML h=new HTML();
+      // programming h=new HTML(); we can do this also 
+       h.founder();
+       Java j=new Java();
+       j.founder();
+       }
+     }
+   ```
+    
+  ```
+   abstract class animal
+   {
+   animal()    // if we are making constructor in abstract class , we have to make constructor in sub class to in order to call this constructor
+   {
+   
+   }
+public abstrat void eat ();
+   }
+   class dog extends animal 
+   {
+    dog()
+    {
+    super()
+    }
+   void eat()
+   {
+   
+   }
+   }
+   class tiger extends animal
+   {
+   void eat{
+   }
+   }
+ ```
 
+   
 
 
 
