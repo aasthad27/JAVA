@@ -319,6 +319,265 @@ class Temp
 Nothing, Constructor chaining can be achieved in any order
 
 
+### INHERITANCE IN JAVA
+
+extend keyword is used 
+method overriding =>possible through inheritance
+```
+// Java program to illustrate the
+// concept of inheritance
+
+// base class
+class Bicycle {
+	// the Bicycle class has two fields
+	public int gear;
+	public int speed;
+
+	// the Bicycle class has one constructor
+	public Bicycle(int gear, int speed)
+	{
+		this.gear = gear;
+		this.speed = speed;
+	}
+
+	// the Bicycle class has three methods
+	public void applyBrake(int decrement)
+	{
+		speed -= decrement;
+	}
+
+	public void speedUp(int increment)
+	{
+		speed += increment;
+	}
+
+	// toString() method to print info of Bicycle
+	public String toString()
+	{
+		return ("No of gears are " + gear + "\n"
+				+ "speed of bicycle is " + speed);
+	}
+}
+
+// derived class
+class MountainBike extends Bicycle {
+
+	// the MountainBike subclass adds one more field
+	public int seatHeight;
+
+	// the MountainBike subclass has one constructor
+	public MountainBike(int gear, int speed,
+						int startHeight)
+	{
+		// invoking base-class(Bicycle) constructor
+		super(gear, speed);
+		seatHeight = startHeight;
+	}
+
+	// the MountainBike subclass adds one more method
+	public void setHeight(int newValue)
+	{
+		seatHeight = newValue;
+	}
+
+	// overriding toString() method
+	// of Bicycle to print more info
+	@Override public String toString()
+	{
+		return (super.toString() + "\nseat height is "
+				+ seatHeight);
+	}
+}
+
+// driver class
+public class Test {
+	public static void main(String args[])
+	{
+
+		MountainBike mb = new MountainBike(3, 100, 25);
+		System.out.println(mb.toString());
+	}
+}
+```
+##### TYPES Of Inheritance 
+```
+// Java program to illustrate the
+// concept of single inheritance
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class one {
+	public void print_geek()
+	{
+		System.out.println("Geeks");
+	}
+}
+
+class two extends one {
+	public void print_for() { System.out.println("for"); }
+}
+// Driver class
+public class Main {
+	public static void main(String[] args)
+	{
+		two g = new two();
+		g.print_geek();
+		g.print_for();
+		g.print_geek();
+	}
+}
+```
+Output
+Geeks
+for
+Geeks
+
+
+MULTILEVEL INHERITANCE
+```
+// Java program to illustrate the
+// concept of Multilevel inheritance
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class one {
+	public void print_geek()
+	{
+		System.out.println("Geeks");
+	}
+}
+
+class two extends one {
+	public void print_for() { System.out.println("for"); }
+}
+
+class three extends two {
+	public void print_geek()
+	{
+		System.out.println("Geeks");
+	}
+}
+
+// Drived class
+public class Main {
+	public static void main(String[] args)
+	{
+		three g = new three();
+		g.print_geek();
+		g.print_for();
+		g.print_geek();
+	}
+}
+```
+
+Output
+Geeks
+for
+Geeks
+
+Hierarchical inheritance
+```
+// Java program to illustrate the
+// concept of Hierarchical inheritance
+
+class A {
+	public void print_A() { System.out.println("Class A"); }
+}
+
+class B extends A {
+	public void print_B() { System.out.println("Class B"); }
+}
+
+class C extends A {
+	public void print_C() { System.out.println("Class C"); }
+}
+
+class D extends A {
+	public void print_D() { System.out.println("Class D"); }
+}
+
+// Driver Class
+public class Test {
+	public static void main(String[] args)
+	{
+		B obj_B = new B();
+		obj_B.print_A();
+		obj_B.print_B();
+
+		C obj_C = new C();
+		obj_C.print_A();
+		obj_C.print_C();
+
+		D obj_D = new D();
+		obj_D.print_A();
+		obj_D.print_D();
+	}
+}
+
+```
+
+Output
+Class A
+Class B
+Class A
+Class C
+Class A
+Class D
+
+Multiple Inheritance (Through Interfaces)
+In Multiple inheritances, one class can have more than one superclass and inherit features from all parent classes. Please note that Java does not support multiple inheritances with classes. In java, we can achieve multiple inheritances only through Interfaces. In the image below, Class C is derived from interfaces A and B.
+
+```
+// Java program to illustrate the
+// concept of Multiple inheritance
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+interface one {
+	public void print_geek();
+}
+
+interface two {
+	public void print_for();
+}
+
+interface three extends one, two {
+	public void print_geek();
+}
+class child implements three {
+	@Override public void print_geek()
+	{
+		System.out.println("Geeks");
+	}
+
+	public void print_for() { System.out.println("for"); }
+}
+
+// Drived class
+public class Main {
+	public static void main(String[] args)
+	{
+		child c = new child();
+		c.print_geek();
+		c.print_for();
+		c.print_geek();
+	}
+}
+
+```
+```
+Output
+Geeks
+for
+Geeks
+```
+
+
+
+
 
 
 
