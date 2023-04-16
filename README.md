@@ -712,11 +712,17 @@ public abstrat void eat ();
    ### INTERFACE IN JAVA
    
    1)contains abstract method 
+   
    2) must be override by the sub class 
+    
    3) interface is collection of abstract methods 
+   
    4) implements keyword is used 
+   
    5) by default interface method are public and abstract 
+   
    6) interface variables are public , static and final 
+  
    7) interface deals between client and developer 
   
   ```
