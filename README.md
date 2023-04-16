@@ -682,7 +682,7 @@ Geeks
      }
    ```
     
-  ```
+```
    abstract class animal
    {
    animal()    // if we are making constructor in abstract class , we have to make constructor in sub class to in order to call this constructor
@@ -718,7 +718,39 @@ public abstrat void eat ();
    5) by default interface method are public and abstract 
    6) interface variables are public , static and final 
    7) interface deals between client and developer 
+  
+  ```
+ package interfaceclass;
 
-   ```
+import java.util.Scanner;
+
+interface client { 
+     void input();     // variable -->public+static+final
+     void output();   // by default public and abstract
+}
+class Raju implements client
+{
+	String name;
+	double sal;
+	public void input()
+	{
+		Scanner r=new Scanner(System.in);
+		System.out.println("enter username:");
+		name=r.nextLine();
+		System.out.println("enter salary:");
+		sal=r.nextDouble();
+		
+	}
+	public void output()
+	{
+		System.out.println(name+" "+sal);
+	}
+	public static void main(String[] args) {
+		client c=new Raju();
+		c.input();
+		c.output();
+	}
+}
+```
 
 
