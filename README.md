@@ -975,4 +975,9 @@ ARORA is my friend
 
 {link} https://www.javatpoint.com/multiprogramming-vs-multiprocessing-vs-multitasking-vs-multithreading
 
+### Difference between Thread and Process
+
+{link) https://www.javatpoint.com/process-vs-thread
+
+
 
