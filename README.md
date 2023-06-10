@@ -851,4 +851,62 @@ public class write {
 	}
 }
 ```
+Read File Char by Char 
+```
+package file_handling;
+import java.io.*;
+public class read {
+    public static void main(String[] args)throws IOException
+    {
+    	try {
+    		FileReader f= new FileReader("C:\\Users\\aasth\\OneDrive\\Desktop\\aaaa.txt");
+    		try {
+    			int i;
+    			while((i=f.read())!=-1)
+    			{
+    				System.out.println((char)i);
+    			}
+    		}
+    		finally {
+    			f.close();
+    		}
+    	}
+    	catch(IOException e)
+    	{
+    		System.out.print(e);
+    	}
+    }
+}
+```
+Read File Line by line
+```
+package file_handling;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class readline {
+	 public static void main(String[] args)throws IOException
+	    {
+	    	try {
+	    		BufferedReader f= new BufferedReader(new FileReader("C:\\Users\\aasth\\OneDrive\\Desktop\\aaaa.txt"));
+	    		try {
+	    			String line=f.readLine();
+	    			while(line!=null)
+	    			{
+	    				System.out.println(line);
+	    				line=f.readLine();
+	    			}
+	    		}
+	    		finally {
+	    			f.close();
+	    		}
+	    	}
+	    	catch(IOException e)
+	    	{
+	    		System.out.print(e);
+	    	}
+	    }
+}
+```
 
