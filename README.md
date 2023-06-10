@@ -761,4 +761,35 @@ class Raju implements client
 }
 ```
 
+### File Handling in Java 
+
+Creating File 
+```
+package file_handling;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+public class create {
+       public static void main(String args[])
+       {
+    	   try {
+    	   File f=new File("C:\\Users\\aasth\\OneDrive\\Desktop\\aaaa.txt");
+    	   if(f.createNewFile())
+    	   {
+    		   System.out.println("file successfully created");
+    		   
+    	   }
+    	   
+    	   else
+    	   {
+    		   System.out.println("file already exist");
+    	   }
+    	   }
+    	   catch(IOException i)
+    	   {
+    		   System.out.println("Exception Handled");
+    	   }
+       }
+}
+```
 
