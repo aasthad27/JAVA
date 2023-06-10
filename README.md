@@ -792,4 +792,26 @@ public class create {
        }
 }
 ```
-
+File Information 
+```
+package file_handling;
+import java.io.*;
+public class fileinfo {
+  public static void main(String[]args)
+  {
+	  File f=new File("C:\\Users\\aasth\\OneDrive\\Desktop\\aaaa.txt");
+	  if(f.exists())
+	  {
+		  System.out.println("File Name: " + f.getName());
+		  System.out.println("File path: "+f.getAbsolutePath());
+		  System.out.println("File Writable: " + f.canWrite());
+		  System.out.println("File Readable: "+ f.canRead());
+		  System.out.println("File size: "+f.length());
+	  }
+	  else
+	  {
+		  System.out.println("File doesn't exist");
+	  }
+  }
+}
+```
