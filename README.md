@@ -931,3 +931,44 @@ public class copy {
 FileInputReader=>can perform only read operation 
 
 FileOutputReader=>can perform both read and write operation 
+
+Check number of pallindrome in file 
+```
+package file_handling;
+import java.io.*;
+public class pallindrome  {
+	public static void main(String[] args)throws IOException
+	{
+     BufferedReader f=new BufferedReader(new FileReader("C:\\Users\\aasth\\OneDrive\\Desktop\\aaaa.txt"));
+         String str="";
+         String rev;
+         int c=0;
+         while((str=f.readLine())!=null)
+         {
+        	 System.out.println(str);
+        	 String s[]=str.split(" ");
+        	 for(String it:s)
+        	 {
+        		 StringBuffer data=new StringBuffer(it);
+        		 data.reverse();
+        		 rev=data.toString();
+        		 if(it.equalsIgnoreCase(rev))
+        		 {
+        			 c++;
+        		 }
+        	 }
+        	 
+         }
+         System.out.println(c);
+}
+}
+```
+OUTPUT
+```
+My name is NITIN
+Hello aaa and bbb word
+How are You
+ARORA is my friend
+4
+```
+```
