@@ -979,5 +979,25 @@ ARORA is my friend
 
 {link) https://www.javatpoint.com/process-vs-thread
 
+### Create Thread in java 
+1) Using Thread Class
+2) Using Runnable Interface
+ 
+ ##### Thread Class 
+ ```
+ class test extends Thread  // STEP 1 Extend the thread Class
+ {
+   public void run()   //Override the run method
+   {
+     //thread task
+   }
+   public static void main(String[] args)   
+   {
+      Test t=new Test();  // create object of class
+      t.start();           //start the thread
+   }
+ }
+ ```
+      
 
 
