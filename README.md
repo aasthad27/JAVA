@@ -121,7 +121,7 @@ JDK VS JRE VS JVM
 
 Features of java
 
-https://www.javatpoint.com/features-of-java
+{link} https://www.javatpoint.com/features-of-java
 
 
 Syntax of java
@@ -971,4 +971,8 @@ How are You
 ARORA is my friend
 4
 ```
+### Difference between Multiprocessing , MultiTasking and Multithreading 
+
+{link} https://www.javatpoint.com/multiprogramming-vs-multiprocessing-vs-multitasking-vs-multithreading
+
 
