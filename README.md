@@ -909,4 +909,25 @@ public class readline {
 	    }
 }
 ```
+Copy content in another file
+```
+package file_handling;
+import java.io.*;
+public class copy {
+   public static void main(String[] args)throws IOException
+   {
+	    FileInputStream r=new FileInputStream("C:\\Users\\aasth\\OneDrive\\Desktop\\aaaa.txt");
+	    FileOutputStream w=new FileOutputStream("C:\\Users\\aasth\\OneDrive\\Desktop\\bbbb.txt");
+	    int i;
+	    while((i=r.read())!=-1)
+	    {
+	    	w.write((char)i);
+	    	System.out.println((char)i);
+	    }
+	    System.out.println("Successfully written");
+   }
+}
+```
+FileInputReader=>can perform only read operation 
 
+FileOutputReader=>can perform both read and write operation 
