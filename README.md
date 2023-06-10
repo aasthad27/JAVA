@@ -815,3 +815,12 @@ public class fileinfo {
   }
 }
 ```
+
+Output
+```
+File Name: aaaa.txt
+File path: C:\Users\Desktop\aaaa.txt
+File Writable: true
+File Readable: true
+File size: 0
+```
