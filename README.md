@@ -998,6 +998,8 @@ ARORA is my friend
    }
  }
  ```
-      
+### Life Cycle of Thread
 
+
+![null (8)](https://github.com/aasthad27/JAVA/assets/89932857/6955841e-416d-4764-bf0a-2e77a93a8af2)
 
