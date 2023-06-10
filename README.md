@@ -824,3 +824,31 @@ File Writable: true
 File Readable: true
 File size: 0
 ```
+Write in File
+```
+package file_handling;
+import java.io.*;
+public class write {
+	public static void main(String[] args) throws IOException
+	{
+      FileWriter f=new FileWriter("C:\\Users\\aasth\\OneDrive\\Desktop\\aaaa.txt");
+      try
+      {
+    	  try
+    	  {
+    	  f.write("learn java with me");
+    	  }
+    	  finally
+    	  {
+    		  f.close();
+    	  }
+    	  System.out.println("Successfully written");
+      }
+      catch(IOException i)
+      {
+    	  System.out.println(i);
+      }
+	}
+}
+```
+
